@@ -35,7 +35,7 @@ export default {
     }
   },
   async mounted(){
-    const mountedData = await this.$axios.$post('http://localhost:5001/axiliquint-dev/us-central1/effJar',{
+    const mountedData = await this.$axios.$post('https://us-central1-axiliquint-dev.cloudfunctions.net/effJar',{
       headers: {
           'Content-Type': 'application/json'
         },
@@ -46,7 +46,7 @@ export default {
   },
   methods:{
     async submit(){
-      const submitData = await this.$axios.$post('http://localhost:5001/axiliquint-dev/us-central1/effJar', {
+      const submitData = await this.$axios.$post('https://us-central1-axiliquint-dev.cloudfunctions.net/effJar', {
         headers: {
           'Content-Type': 'application/json'
         },
