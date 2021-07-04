@@ -11,9 +11,12 @@
       <div class="mt-5 max-w-md">
         <h3 class="font-semibold underline text-lg">Add to The Jar</h3>
         <p>Who?</p>
-        <input type="text" class="mt-1 block p-2 w-full rounded-md border-gray-300 shadow-md focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" v-model="who" />
+        <input name="field_name" class="border border-2 rounded-r px-4 py-2 w-full" type="text" v-model="who" />
         <p>They owe: </p>
-        <input type="number" class="mt-1 block p-2 w-full rounded-md border-gray-300 shadow-md focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" v-model="howMuch" />
+        <div class="flex">
+            <span class="text-sm border border-2 rounded-l px-4 py-2 bg-gray-300 whitespace-no-wrap">$</span>
+            <input name="field_name" class="border border-2 rounded-r px-4 py-2 w-full" type="number" v-model="howMuch" />
+        </div>
         <button
             type="button"
             v-on:click="submit()"
