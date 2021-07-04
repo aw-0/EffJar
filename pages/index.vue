@@ -71,7 +71,7 @@ export default {
         this.effData.push({
           id: this.who,
           data: {
-            howMuch: this.howMuch
+            howMuch: this.howMuch.toFixed(2)
           }
         })
       }
